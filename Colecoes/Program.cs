@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Colecoes.Helper;
 
 namespace Colecoes
@@ -8,19 +9,59 @@ namespace Colecoes
     {
         static void Main(string[] args)
         {
-            
-            Dictionary<string,string> dicionario = new Dictionary<string, string>();
 
-            dicionario.Add("PE", "Pernambuco");
-            dicionario.Add("SP", "São Paulo");
-            dicionario.Add("BH", "Belo Horizonte");
+            int[] numbers = { 5, 10, 8, 0, 3, 6, 12, 100, 12, 5, 100 };
+
+            var mim = numbers.Min();
+
+            var max = numbers.Max();
+
+            var med = numbers.Average();
+
+            var soma = numbers.Sum();
+
+            var arrayUnico = numbers.Distinct().ToArray();
+
+            System.Console.WriteLine($"valor minimo: {mim}, valor maximo: {max}, valor medio: {med}");
+
+            System.Console.WriteLine($"Soma dos valores: {soma}");
+
+            System.Console.WriteLine($"Array original: {string.Join(", ", numbers)}, Novo array: {string.Join(", ", arrayUnico)}");
+
+            // //Query syntax:
+
+            // var numerosPares =
+            //      from num in numbers
+            //      where num % 2 == 0
+            //      orderby num
+            //      select num;
+
+            // //method syntax:
+
+            // var numerosParesMetodo = numbers.Where(x => x % 2 == 0).OrderBy(x => x).ToList();
+
+            // System.Console.WriteLine($"Números pares query: " + string.Join(", ", numerosPares));
+            // System.Console.WriteLine($"Números pares metodo: " + string.Join(", ", numerosParesMetodo));
+
+
+
+
+
+
+
+            //dicionarios
+            // Dictionary<string,string> dicionario = new Dictionary<string, string>();
+
+            // dicionario.Add("PE", "Pernambuco");
+            // dicionario.Add("SP", "São Paulo");
+            // dicionario.Add("BH", "Belo Horizonte");
 
 
             // System.Console.WriteLine("Informer a key que deseja procurar");
             // string valorPRocurado = Console.ReadLine();
             // System.Console.WriteLine(dicionario[valorPRocurado]);
 
-            
+
             // System.Console.WriteLine("Informer a key que deseja alterar");
             // string valorASerAlterado = Console.ReadLine();
             // System.Console.WriteLine("Informe o nome da atualização");
@@ -48,17 +89,17 @@ namespace Colecoes
             // }
 
 
-            string valorProcurado = "SC";
+            //string valorProcurado = "SC";
             //var teste = dicionario["SC"];
 
-            if (dicionario.TryGetValue(valorProcurado, out string estadoEncontrado))
-            {
-                System.Console.WriteLine(estadoEncontrado);
-            }
-            else
-            {
-                System.Console.WriteLine($"Chave {valorProcurado} não existe no dicionario");
-            }
+            // if (dicionario.TryGetValue(valorProcurado, out string estadoEncontrado))
+            // {
+            //     System.Console.WriteLine(estadoEncontrado);
+            // }
+            // else
+            // {
+            //     System.Console.WriteLine($"Chave {valorProcurado} não existe no dicionario");
+            // }
 
 
 
