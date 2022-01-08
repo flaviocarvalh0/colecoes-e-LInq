@@ -9,15 +9,89 @@ namespace Colecoes
         static void Main(string[] args)
         {
 
-            OperacoesLista op = new OperacoesLista();
-            List<string> lista = new List<string>();
-            string[] listaArray = new string[2] { "SC", "BH" };
-            lista.Add("SP");
-            lista.Add("PE");
-            lista.Add("BA");
+            Stack<string> pilha = new Stack<string>();
 
-            System.Console.WriteLine($"Lista de elementos: {lista.Count}");
-            op.ImprimirListaString(lista);
+            pilha.Push(".NET");
+            pilha.Push("DDD");
+            pilha.Push("Código Limpo");
+
+            System.Console.WriteLine($"Livros para a leitura: {pilha.Count}");
+            while (pilha.Count > 0)
+            {
+                System.Console.WriteLine($"Próximo livro para a leitura: {pilha.Peek()}");
+                System.Console.WriteLine($"{pilha.Pop()}, livro terminado, tirando da lista. ");
+            }
+            System.Console.WriteLine($"Livros para a leitura: {pilha.Count}");
+
+
+            //Fila
+            // Queue<string> fila = new Queue<string>();
+
+            // fila.Enqueue("Flávio");
+            // fila.Enqueue("Ray");
+            // fila.Enqueue("Noah");
+
+            // System.Console.WriteLine($"Pessoas na fila: {fila.Count}");
+
+            // while (fila.Count > 0)
+            // {
+            //     System.Console.WriteLine($"Vez de: {fila.Peek()}");
+            //     System.Console.WriteLine($"{fila.Dequeue()} atendido");
+            // }
+
+            // System.Console.WriteLine($"Pessoas na fila: {fila.Count}");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //Tipos genericos
+            // OperacoesLista op = new OperacoesLista();
+            // List<string> lista = new List<string>();
+            // string[] listaArray = new string[2] { "SC", "BH" };
+            // lista.Add("SP");
+            // lista.Add("PE");
+            // lista.Add("BA");
+
+            // System.Console.WriteLine($"Lista de elementos: {lista.Count}");
+            // op.ImprimirListaString(lista);
 
             // System.Console.Write("Informe qual elemento deseja remover: ");
             // string valor = Console.ReadLine();
@@ -32,9 +106,9 @@ namespace Colecoes
             // System.Console.WriteLine("Lista depois do merge:");
             // op.ImprimirListaString(lista);
 
-            System.Console.WriteLine("LIsta depois de adicionar: ");
-            lista.Insert(1,"Rj");
-            op.ImprimirListaString(lista);
+            // System.Console.WriteLine("LIsta depois de adicionar: ");
+            // lista.Insert(1,"Rj");
+            // op.ImprimirListaString(lista);
 
 
 
