@@ -8,20 +8,83 @@ namespace Colecoes
     {
         static void Main(string[] args)
         {
+            
+            Dictionary<string,string> dicionario = new Dictionary<string, string>();
 
-            Stack<string> pilha = new Stack<string>();
+            dicionario.Add("PE", "Pernambuco");
+            dicionario.Add("SP", "São Paulo");
+            dicionario.Add("BH", "Belo Horizonte");
 
-            pilha.Push(".NET");
-            pilha.Push("DDD");
-            pilha.Push("Código Limpo");
 
-            System.Console.WriteLine($"Livros para a leitura: {pilha.Count}");
-            while (pilha.Count > 0)
+            // System.Console.WriteLine("Informer a key que deseja procurar");
+            // string valorPRocurado = Console.ReadLine();
+            // System.Console.WriteLine(dicionario[valorPRocurado]);
+
+            
+            // System.Console.WriteLine("Informer a key que deseja alterar");
+            // string valorASerAlterado = Console.ReadLine();
+            // System.Console.WriteLine("Informe o nome da atualização");
+            // string valorAlterado = Console.ReadLine();
+
+
+            // dicionario[valorASerAlterado] = valorAlterado;
+
+            // System.Console.WriteLine("Valor atualizado");
+
+            // foreach (KeyValuePair<string, string> item in dicionario)
+            // {   
+            //     System.Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+            // }
+
+            // System.Console.WriteLine("Informe a key a ser removida: ");
+            // string remove = Console.ReadLine();
+
+            // System.Console.WriteLine($"Removendo o valor: {remove}");
+            // dicionario.Remove(remove);
+
+            // foreach (KeyValuePair<string, string> item in dicionario)
+            // {   
+            //     System.Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+            // }
+
+
+            string valorProcurado = "SC";
+            //var teste = dicionario["SC"];
+
+            if (dicionario.TryGetValue(valorProcurado, out string estadoEncontrado))
             {
-                System.Console.WriteLine($"Próximo livro para a leitura: {pilha.Peek()}");
-                System.Console.WriteLine($"{pilha.Pop()}, livro terminado, tirando da lista. ");
+                System.Console.WriteLine(estadoEncontrado);
             }
-            System.Console.WriteLine($"Livros para a leitura: {pilha.Count}");
+            else
+            {
+                System.Console.WriteLine($"Chave {valorProcurado} não existe no dicionario");
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+            //pilha
+            // Stack<string> pilha = new Stack<string>();
+
+            // pilha.Push(".NET");
+            // pilha.Push("DDD");
+            // pilha.Push("Código Limpo");
+
+            // System.Console.WriteLine($"Livros para a leitura: {pilha.Count}");
+            // while (pilha.Count > 0)
+            // {
+            //     System.Console.WriteLine($"Próximo livro para a leitura: {pilha.Peek()}");
+            //     System.Console.WriteLine($"{pilha.Pop()}, livro terminado, tirando da lista. ");
+            // }
+            // System.Console.WriteLine($"Livros para a leitura: {pilha.Count}");
 
 
             //Fila
