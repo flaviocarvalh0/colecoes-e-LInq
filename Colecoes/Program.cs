@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Colecoes.Helper;
 
 namespace Colecoes
@@ -7,10 +8,67 @@ namespace Colecoes
     {
         static void Main(string[] args)
         {
-            OperacoesArray op = new OperacoesArray();
-            int[] array = new int[5] { 6, 3, 8, 1, 9 };
-            int[] arrayCopia = new int[10];
-            string[] arrayString = op.ConverterArrayString(array);
+
+            OperacoesLista op = new OperacoesLista();
+            List<string> lista = new List<string>();
+            string[] listaArray = new string[2] { "SC", "BH" };
+            lista.Add("SP");
+            lista.Add("PE");
+            lista.Add("BA");
+
+            System.Console.WriteLine($"Lista de elementos: {lista.Count}");
+            op.ImprimirListaString(lista);
+
+            // System.Console.Write("Informe qual elemento deseja remover: ");
+            // string valor = Console.ReadLine();
+            // lista.Remove(valor);
+            // System.Console.WriteLine($"{valor} removido!");
+
+            // op.ImprimirListaString(lista);
+
+            // System.Console.WriteLine("Lista atual: ");
+
+            // lista.AddRange(listaArray);
+            // System.Console.WriteLine("Lista depois do merge:");
+            // op.ImprimirListaString(lista);
+
+            System.Console.WriteLine("LIsta depois de adicionar: ");
+            lista.Insert(1,"Rj");
+            op.ImprimirListaString(lista);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //Arrays
+            // OperacoesArray op = new OperacoesArray();
+            // int[] array = new int[5] { 6, 3, 8, 1, 9 };
+            // int[] arrayCopia = new int[10];
+            // string[] arrayString = op.ConverterArrayString(array);
 
 
 
